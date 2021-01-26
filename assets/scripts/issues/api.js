@@ -46,7 +46,7 @@ const updateIssue = function (formData) {
   })
 }
 
-const showIssues = function (formData) {
+const showIssues = function () {
   return $.ajax({
     url: config.apiUrl + '/issues',
     method: 'GET'

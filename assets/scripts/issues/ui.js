@@ -84,9 +84,9 @@ const onShowIssuesSuccess = function (res) {
     $(list).attr('role', 'tab')
     $(list).html('<h4>' + issArr.title + '</h4><p>' + issArr.text + '</p><h6>' + issArr.tag + '</h6>')
 
-    const list2 = document.createElement('div')
-    $(list2).addClass('tab-pane fade')
-    $(list2).attr('id', 'list-' + issArr._id)
+    const list2 = document.createElement('div') // creadte div
+    $(list2).addClass('tab-pane fade')// https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_comp_nav-toggle&stacked=h
+    $(list2).attr('id', 'list-' + issArr._id) //this connect to list & list2
     $(list2).attr('role', 'tabpanel')
 
     $(list2).html('<form class="create-comments"><textarea type="text" name="text" class="form-control" placeholder="Add a comment" aria-label="Add a comment"></textarea><input type="hidden" value="' + issArr._id + '" name="issueId" class="form-control" placeholder="Issue ID" required><input type="submit" class="btn btn-primary" value="Comment"></form>')
